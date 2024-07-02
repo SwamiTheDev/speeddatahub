@@ -1,20 +1,35 @@
-import ReactSpeedometer from "react-d3-speedometer";
-import './meter.css';
+import { Heat, Flat } from '@alptugidin/react-circular-progress-bar';
+import './meter.css'; // Import CSS for styling
 
-export default function Meter(props) {
+const Meter = (props) => {
+
     return (
-        <>
-            <ReactSpeedometer
-                className='meter'
-                maxValue={100}
-                ringWidth={20}
-                customSegmentStops={[0, 1, 5, 10, 15, 20, 25, 30, 50, 70, 100]}
-                segmentColors={["#FAFAFA", "#FAFAFA", "#FAFAFA", "#FAFAFA", "#FAFAFA", "#007fff", "#007fff", "#FAFAFA", "#FAFAFA", "#FAFAFA"]}
-                needleTransitionDuration={9000}
-                needleTransition="easeElastic"
-                currentValueText={`${props.value} Mbps`}
-                value={props.value}
+        <div className="speedometer-container">
+
+
+            <Flat className='meter'
+                progress={props.value}
+                sx={{
+                    strokeColor: '#5f5353', // Main stroke color
+                    bgStrokeColor: '#0000FF', // Background stroke color (blue)
+                    barWidth: 5,
+                    bgColor: { value: '#de8282', transparency: '10' },
+                    shape: 'threequarters',
+                    valueSize: 20,
+                    valueWeight: 'lighter',
+                    valueFamily: 'Candara',
+                    textFamily: 'Calibri',
+                    miniCircleColor: '#100f0f',
+                    miniCircleSize: 0,
+                    shadow: true,
+                    shadowColor: '#0000FF', // Apply shadow color
+                    shadowBlur: 10, // Adjust blur for better visibility
+                }}
             />
-        </>
-    )
-}
+
+
+        </div>
+    );
+};
+
+export default Meter;
