@@ -1,27 +1,18 @@
-import Internet from "../component/InternetInfo/internet";
-// import Meter from "../component/Meter/meter";
-import Download from "../component/download/download";
+import TopNav from "../component/Navbar/navbar";
 import SpeedTest from "../component/speedtest/speedtest";
+import './layout.css'
 
 export default function Layout() {
     return (
         <>
-            <div className="grid">
-                <div className="row ">
-                    <SpeedTest />
-                </div>
-                <div className="row">
-                    {/* internet info */}
-                    <div className="col">
-                        <Internet />
-                    </div>
+            <div className="__page">
 
-                </div>
-                <div className="row">
-                    <div className="col">
+                <div className="grid">
+                    <TopNav />
+                    <div className="row ">
+                        <SpeedTest />
                     </div>
-                    <div className="col"></div>
-                    <div className="col"></div>
+                    {/* <Internet /> */}
                 </div>
             </div>
         </>
