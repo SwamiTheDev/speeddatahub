@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import './styles.css';
-import Download from '../download/download.jsx';
-import Upload from '../upload/upload.jsx';
-import Ping from '../ping/ping.jsx';
-import Bigmeter from '../bigmeter/bigmeter.jsx';
+import SpeedMeter from '../SpeedMeter/SpeedMeter.jsx';
 
 const SpeedTest = () => {
     const [loading, setLoading] = useState(false);
@@ -54,15 +51,15 @@ const SpeedTest = () => {
 
             <div className="row bg-light">
                 <div className="col bg-black  " style={{ 'border': '2px red solid' }}>
-                    {/* <Download value={downloadSpeed} /> */}
-                    <Bigmeter value={downloadSpeed} />
+                    <SpeedMeter value={downloadSpeed} />
+                    {/* <Bigmeter value={downloadSpeed} /> */}
                 </div>
                 <div className="col">
-                    <Upload value={uploadSpeed} />
+                    {/* <Upload value={uploadSpeed} /> */}
 
                 </div>
                 <div className="col">
-                    <Ping value={pingSpeed} />
+                    {/* <Ping value={pingSpeed} /> */}
 
                 </div>
             </div>
