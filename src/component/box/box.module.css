@@ -1,0 +1,110 @@
+@import "../../App.css";
+
+.title {
+  color: var(--primary-color);
+  font-weight: var(--text-light);
+  letter-spacing: 1.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.speed {
+  color: var(--light-color);
+  font-weight: var(--text-light);
+}
+
+.value {
+  opacity: var(--opacity);
+  color: var(--light-color);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.box {
+  background-color: #0e1361;
+  opacity: 1;
+}
+
+/* Extra small devices (phones, 600px and down)   */
+@media only screen and (max-width: 600px) {
+  .title {
+    padding-bottom: 5px;
+    font-size: 9px !important;
+    letter-spacing: 1.5px;
+  }
+  .value {
+    padding-top: 4px;
+    font-size: 9px !important;
+  }
+  .speed {
+    font-size: 14px;
+    padding-bottom: 2px;
+    font-weight: bolder;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .title {
+    padding-bottom: 5px;
+    font-size: 10px !important;
+    letter-spacing: 1.5px;
+  }
+  .value {
+    padding-top: 4px;
+    font-size: 10px !important;
+  }
+  .speed {
+    font-size: 13px;
+    padding-bottom: 2px;
+    font-weight: bolder;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .title {
+    padding-bottom: 5px;
+    font-size: 11px !important;
+    letter-spacing: 1.5px;
+  }
+  .value {
+    padding-top: 4px;
+    font-size: 11px !important;
+  }
+  .speed {
+    font-size: 14px;
+    padding-bottom: 2px;
+    font-weight: bolder;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .title {
+    padding-bottom: 5px;
+    font-size: 11px !important;
+    letter-spacing: 1.5px;
+  }
+  .value {
+    padding-top: 4px;
+    font-size: 11px !important;
+  }
+  .speed {
+    font-size: 14px;
+    padding-bottom: 2px;
+    font-weight: bolder;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .title {
+    padding-bottom: 10px;
+  }
+  .value {
+    padding-top: 5px;
+  }
+  .speed {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+}
