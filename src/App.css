@@ -4,12 +4,17 @@
   --primary-color: #ff4848;
   --secondary-color: #050737;
   --light-color: #ffffff;
-  --text-bold: 600;
-  --text-light: 400;
+  --text-bold: 800;
+  --text-light: 300;
+  --opacity: 0.5;
 }
 
 .App {
   background-color: var(--secondary-color);
+  /* background-color: var(--light-color); */
   height: 100vh;
   text-align: center;
+}
+p {
+  margin-bottom: 0%;
 }
