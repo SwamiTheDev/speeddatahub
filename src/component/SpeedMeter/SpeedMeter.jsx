@@ -1,52 +1,166 @@
-import React, { useState, useEffect } from "react";
-import GaugeComponent from "react-gauge-component";
+import React, { useEffect, useRef } from "react";
+import * as echarts from 'echarts';
 import './SpeedMeter.css';
 
 const SpeedMeter = (props) => {
-    const [loading, setLoading] = useState(true);
-    const [colorArray, setColorArray] = useState(['rgb(92, 92, 92)']);
+    const chartRef = useRef(null);
+    const myChartRef = useRef(null);
 
     useEffect(() => {
-        // Simulating loading for 3 seconds
-        const timer = setTimeout(() => {
-            setLoading(false);
-            setColorArray(['red', 'orange', 'yellow', 'green', 'blue']);
-        }, 3000);
+        const dom = chartRef.current;
+        if (dom) {
+            myChartRef.current = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
 
-        return () => clearTimeout(timer);
-    }, []);
+            const option = {
+                series: [
 
-    const subArcs = [
-        { limit: 20, color: colorArray[0], showTick: true },
-        { limit: 40, color: colorArray[1], showTick: true },
-        { limit: 60, color: colorArray[2], showTick: true },
-        { limit: 80, color: colorArray[3], showTick: true },
-        { limit: 100, color: colorArray[4], showTick: true }
-    ];
+                    {
+                        type: 'gauge',
+                        center: ['50%', '60%'],
+                        startAngle: 200,
+                        endAngle: -20,
+                        min: 0,
+                        max: 120,
+                        splitNumber: 12,
+                        width: 10,
+                        itemStyle: {
+                            color: '#000000' // Black color
+                        },
+                        progress: {
+                            show: true,
+                            width: 30
+                        },
+                        pointer: {
+                            show: false
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                width: 30,
+                                color: [[1, 'pink']]
+                            }
+                        },
+                        axisTick: {
+                            distance: -45,
+                            splitNumber: 5,
+                            lineStyle: {
+                                width: 2,
+                                color: '#999'
+                            }
+                        },
+                        splitLine: {
+                            distance: -52,
+                            length: 14,
+                            lineStyle: {
+                                width: 3,
+                                color: 'violet'
+                            }
+                        },
+                        axisLabel: {
+                            distance: -20,
+                            color: 'green',
+                            fontSize: 20
+                        },
+                        anchor: {
+                            show: false
+                        },
+                        title: {
+                            show: false
+                        },
+                        detail: {
+                            valueAnimation: true,
+                            width: '60%',
+                            lineHeight: 40,
+                            borderRadius: 8,
+                            offsetCenter: [0, '-15%'],
+                            fontSize: 60,
+                            fontWeight: 'bolder',
+                            formatter: '{value} °C',
+                            color: 'auto'
+                        },
+                        data: [
+                            {
+                                value: props.value
+                            }
+                        ]
+                    },
+                    {
+                        type: 'gauge',
+                        center: ['50%', '60%'],
+                        startAngle: 200,
+                        endAngle: -20,
+                        min: 0,
+                        max: 120,
+                        itemStyle: {
+                            color: '#FD7347'
+                        },
+                        progress: {
+                            show: true,
+                            width: 3
+                        },
+                        pointer: {
+                            show: false
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        detail: {
+                            show: false
+                        },
+                        data: [
+                            {
+                                value: props.value
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            myChartRef.current.setOption(option);
+
+            const resizeChart = () => {
+                myChartRef.current.resize();
+            };
+
+            window.addEventListener('resize', resizeChart);
+
+            const interval = setInterval(() => {
+                myChartRef.current.setOption({
+                    series: [
+                        {
+                            data: [
+                                {
+                                    value: props.value
+                                }
+                            ]
+                        }
+
+                    ]
+                });
+            }, 2000);
+
+            return () => {
+                clearInterval(interval);
+                window.removeEventListener('resize', resizeChart);
+                myChartRef.current.dispose();
+            };
+        }
+    }, [props.value]);
 
     return (
         <div className="gauge-container">
-            <GaugeComponent
-                arc={{
-                    colorArray: colorArray,
-                    cornerRadius: 10,
-                    subArcs: subArcs
-                }}
-                pointer={{
-                    type: 'blob',
-                    animate: true,
-                    color: 'red',
-                    elastic: true,
-                    animationDuration: 3000,
-                    animationDelay: 100
-                }}
-                labels={{
-                    valueLabel: {
-                        matchColorWithArc: true
-                    }
-                }}
-                value={props.value}
-            />
+            <div id="chart-container" ref={chartRef} className="meter"></div>
         </div>
     );
 };
