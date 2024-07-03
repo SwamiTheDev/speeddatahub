@@ -1,0 +1,56 @@
+.effect1_alt {
+  border-radius: 50%;
+  padding: 30px;
+  border: 2px red solid;
+}
+button {
+  border: none;
+  background: none;
+}
+
+/* meter desgin code */
+
+.effect1_alt {
+  padding: 50px;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #27ae60, 0 0 0 0 #fff, 0 0 0 0 #27ae60;
+}
+
+.effect1_alt:hover {
+  box-shadow: 0 0 0 10px #fff, 0 0 0 13px #27ae60, 0 0 0 20px #fff,
+    0 0 0 23px #27ae60;
+  animation: effect1_alt 1s linear 0s infinite;
+}
+
+.effect1_alt:active {
+  box-shadow: 0 0 0 18px #fff, 0 0 0 21px #27ae60, 0 0 0 20px #fff,
+    0 0 0 23px #27ae60;
+}
+
+@keyframes effect1_alt {
+  0% {
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #27ae60, 0 0 0 0 #fff, 0 0 0 0 #27ae60;
+  }
+  50% {
+    box-shadow: 0 0 0 5px #fff, 0 0 0 8px #27ae60, 0 0 0 15px #fff,
+      0 0 0 18px #27ae60;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #27ae60, 0 0 0 0 #fff, 0 0 0 0 #27ae60;
+  }
+}
+
+@media only screen and(min-width :1200px) {
+  button {
+    height: 500px;
+    max-height: 500px;
+    border: none;
+    background: none;
+  }
+  .button-container {
+    padding: 100px;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
