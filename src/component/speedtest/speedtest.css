@@ -1,10 +1,56 @@
+@import "../../App.css";
+
+.pagetitle {
+  color: var(--light-color);
+  margin-top: 20px !important;
+}
+.internetinfo .value {
+  color: var(--light-color);
+  font-weight: var(--text-bold);
+}
+.internetinfo .title {
+  color: var(--light-color);
+  font-weight: var(--text-light);
+  opacity: var(--opacity);
+}
+.box {
+  background-color: #151a4c;
+  padding: 20px;
+  margin: 10px 0px 10px 0px;
+}
+.box:nth-child(4) {
+  border-radius: 0px 7px 7px 0px;
+}
+.box:nth-child(2) {
+  border-radius: 7px 0px 0px 7px;
+  border-right: 1px solid rgb(190, 187, 187) !important;
+}
+
+.box:nth-child(3) {
+  border-right: 1px solid white !important;
+}
 .internetinfo {
-  color: white;
+  text-align: left;
+}
+._icon {
+  color: red;
+  width: 20px !important;
+}
+img {
+  width: 25px;
+  height: 25px;
 }
 
 /* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
-} */
+@media only screen and (max-width: 600px) {
+  .box:nth-child(2) {
+    z-index: 9;
+  }
+  .box:nth-child(3) {
+    margin-left: -10px;
+    padding-right: 10px !important;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* @media only screen and (min-width: 600px) {
@@ -20,4 +66,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .internetinfo {
+    padding: 20px 20px;
+  }
+  .internetinfo .title {
+    padding-bottom: 10px;
+  }
 }
