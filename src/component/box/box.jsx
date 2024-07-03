@@ -1,10 +1,13 @@
+import boxstyle from './box.module.css'
+
 export default function Box(props) {
     return (
         <>
-            <div>
-                <p>{props.title}</p>
-                <p>{props.speed} <span>{props.value}</span></p>
-            </div>
+            <div className=''>
+                <p className={boxstyle.title}>{props.title}</p>
+                <p className={boxstyle.speed}>{props.speed} </p>
+                <p class={boxstyle.value}>{props.value}</p>
+            </div >
         </>
     )
 }
