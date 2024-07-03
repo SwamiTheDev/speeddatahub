@@ -5,6 +5,9 @@
   "dependencies": {
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.2.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^5.15.21",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,6 +22,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-d3-speedometer": "^2.2.1",
     "react-dom": "^18.3.1",
+    "react-feather": "^2.0.10",
     "react-gauge-component": "^1.2.21",
     "react-resize-detector": "^11.0.1",
     "react-scripts": "5.0.1",
