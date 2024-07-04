@@ -12,7 +12,7 @@
 .App {
   background-color: var(--secondary-color);
   /* background-color: var(--light-color); */
-  height: 100vh;
+  height: 100%;
   text-align: center;
 }
 p {
