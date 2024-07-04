@@ -7,6 +7,7 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .speed {
   color: var(--light-color);
   font-weight: var(--text-light);
@@ -17,10 +18,6 @@
   color: var(--light-color);
   text-transform: uppercase;
   letter-spacing: 1.2px;
-}
-.box {
-  background-color: #0e1361;
-  opacity: 1;
 }
 
 /* Extra small devices (phones, 600px and down)   */
