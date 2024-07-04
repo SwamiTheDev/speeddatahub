@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SpeedMeter from '../SpeedMeter/SpeedMeter.jsx';
+import Meter from '../Meter/Meter.jsx';
 import './speedtest.css';
 import Box from '../box/box.jsx';
 import Checkbutton from '../checkbutton/checkbutton.jsx';
@@ -18,23 +18,28 @@ const SpeedTest = () => {
     const [downloadSpeed, setDownloadSpeed] = useState(0);
     const [uploadSpeed, setUploadSpeed] = useState(0);
     const [pingSpeed, setPingSpeed] = useState(0);
-    const [showSpeedMeter, setShowSpeedMeter] = useState(false);
+    const [showMeter, setShowMeter] = useState(false);
     const [ip, setIp] = useState('')
     const [type, setType] = useState('')
     const [org, setOrg] = useState('')
     const [device, setDevice] = useState('')
     const [domain, setDomain] = useState('')
+    const [showTransition, setShowTransition] = useState(false);
 
     const handleButtonClick = () => {
-        setShowSpeedMeter(true);
+        setShowMeter(true);
         setLoading(true);
         setDownloadSpeed(0);
         setUploadSpeed(0);
         setPingSpeed(0);
+
+        setTimeout(() => {
+            setShowTransition(true);
+        }, 1000);
     };
 
     const Refresh = () => {
-        setShowSpeedMeter(true);
+        setShowMeter(true);
         setLoading(true);
         setDownloadSpeed(0);
         setUploadSpeed(0);
@@ -50,10 +55,8 @@ const SpeedTest = () => {
                 setOrg(response.data.connection.organization);
                 setDevice(response.data.user_agent.device.type);
                 setDomain(response.data.connection.domain);
-
             })
             .catch(error => { console.log(error) });
-
 
         let interval = null;
 
@@ -85,115 +88,130 @@ const SpeedTest = () => {
         <div className="center">
             <h1 className="pagetitle">Internet Speed Test</h1>
 
-            <div className='row mx-auto  '>
+            {/* Results */}
+            <div className="row mx-auto ">
 
-                {/* Results */}
-                <div className="row mx-auto mb-3 ">
-
-                    {/* empty for UI */}
-                    <div className="col-xxl-3">
-                    </div>
-
-                    {/* upload Speed */}
-                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 box" >
-                        <Box title='Upload' speed={uploadSpeed} value='Mbps' />
-                    </div>
-
-                    {/* download Speed */}
-                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 box">
-                        <Box title='Download' speed={downloadSpeed} value='Mbps' />
-                    </div>
-
-                    {/* ping speed */}
-                    <div className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 box">
-                        <Box title='Ping' speed={pingSpeed} value='ms' />
-                    </div>
-
-                    {/* empty for UI */}
-                    <div className="col-xxl-3  ">
-                    </div>
+                {/* empty for UI */}
+                <div className="col-lg-3 col-xl-3 col-xxl-3">
                 </div>
 
-                {/* Speed Meter */}
-                <div className="row">
-                    <div className="col-xxl-3 ">
+                {/* upload Speed */}
+                <div className="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-xxl-2 box" >
+                    <Box title='Upload' speed={uploadSpeed} value='Mbps' />
+                </div>
+
+                {/* download Speed */}
+                <div className="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-xxl-2 box">
+                    <Box title='Download' speed={downloadSpeed} value='Mbps' />
+                </div>
+
+                {/* ping speed */}
+                <div className="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-xxl-2 box">
+                    <Box title='Ping' speed={pingSpeed} value='ms' />
+                </div>
+
+                {/* empty for UI */}
+                <div className="col-lg-3 col-xl-3 col-xxl-3 ">
+                </div>
+            </div>
+
+            {/* row */}
+            <div className='row mx-auto '>
+
+                {/* interntet info */}
+                <div className="col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                    <div className="row ">
 
                         {/* Ip address */}
-                        <div className='internetinfo'>
-                            <div className='d-flex'>
-                                <div className='d-flex align-items-center pe-3'>
-                                    <img src={connectionPng} />
+                        <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10">
+                            <div className='internetinfo'>
+                                <div className='d-flex'>
+                                    <div className='d-flex align-items-center pe-3'>
+                                        <img src={connectionPng} />
+                                    </div>
+                                    <div className=' '>
+                                        <p className='title'>IP Address</p>
+                                        <p className='value'>{ip}</p>
+                                    </div>
                                 </div>
-                                <div className=' '>
-                                    <p className='title'>IP Address</p>
-                                    <p className='value'>{ip}</p>
+                            </div>
+                        </div>
+
+                        {/* organization info*/}
+                        <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10 ">
+                            <div className='internetinfo'>
+                                <div className='d-flex'>
+                                    <div className='d-flex align-items-center pe-3'>
+                                        <img src={organization} />
+                                    </div>
+                                    <div className=' '>
+                                        <p className='title'>Organization</p>
+                                        <p className='value'>{org}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* connection type */}
-                        <div className='internetinfo'>
-                            <div className='d-flex'>
-                                <div className='d-flex align-items-center pe-3'>
-                                    <img src={socket} />
-                                </div>
-                                <div className=' '>
-                                    <p className='title'>Connection Type</p>
-                                    <p className='value'>{type}</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Internet info*/}
-                        <div className='internetinfo'>
-                            <div className='d-flex'>
-                                <div className='d-flex align-items-center pe-3'>
-                                    <img src={organization} />
-                                </div>
-                                <div className=' '>
-                                    <p className='title'>Organization</p>
-                                    <p className='value'>{org}</p>
+                        <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10">
+                            <div className='internetinfo'>
+                                <div className='d-flex'>
+                                    <div className='d-flex align-items-center pe-3'>
+                                        <img src={socket} />
+                                    </div>
+                                    <div className=' '>
+                                        <p className='title'>Connection Type</p>
+                                        <p className='value'>{type}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Device info */}
-                        <div className='internetinfo'>
-                            <div className='d-flex'>
-                                <div className='d-flex align-items-center pe-3'>
-                                    <img src={devices} />
-                                </div>
-                                <div className=' '>
-                                    <p className='title'>Device</p>
-                                    <p className='value'>{device}</p>
+                        <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10">
+                            <div className='internetinfo'>
+                                <div className='d-flex'>
+                                    <div className='d-flex align-items-center pe-3'>
+                                        <img src={devices} />
+                                    </div>
+                                    <div className=' '>
+                                        <p className='title'>Device</p>
+                                        <p className='value'>{device}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xxl-6 mx-auto">
-                        <div className=' d-flex justify-content-center '>
-                            {!showSpeedMeter && (
-                                <button onClick={handleButtonClick} >
-                                    <Checkbutton />
-                                </button>
-                            )}
-                            {showSpeedMeter && <SpeedMeter value={downloadSpeed} />}
-                            {showSpeedMeter ? <button onClick={Refresh} ><img src={refresh} /></button> : <button></button>}
-                        </div>
+                </div>
 
-                        {/* display the ip and provider */}
+                {/* speed meter */}
+                <div className="col-lg-6 col-xl-6 col-xxl-6">
+                    <div className={'d-flex justify-content-center __speedmeter  '}>
+                        {!showMeter && (
+                            <button onClick={handleButtonClick} style={{ border: 'none' }}>
+                                <Checkbutton />
+                            </button>
+                        )}
+                        {showMeter && <Meter value={downloadSpeed} />}
+                    </div>
 
-                        <div className="row">
+                    {/* display the refresh button */}
+                    <div className='refresh_btn'>
+                        {showMeter ? <button onClick={Refresh} ><img src={refresh} /></button> : <button></button>}
+                    </div>
 
-                            {/* empty space */}
-                            <div className="col-1 col-xxl-2"></div>
+                    {/* display the ip and provider */}
+                    <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
 
-                            {/* provider details */}
-                            <div className="col-5 col-xxl-4 me-xxl-5">
+                        {/* empty space */}
+                        <div className="col-1 col-xxl-2"></div>
+
+                        {/* provider details */}
+                        <div className="col-5 col-xxl-4 me-xxl-5">
+                            <div className='providerinfo'>
                                 <div className='d-flex'>
-                                    <div className='d-flex align-items-center pe-3'>
+                                    <div className='d-flex align-items-center '>
                                         <img src={provider} />
-
                                     </div>
                                     <div className='internetinfo'>
                                         <p className='title'>Provider</p>
@@ -201,32 +219,39 @@ const SpeedTest = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            {/* ip details */}
-                            <div className="col-5 col-xxl-4  ms-4">
-                                <div className='d-flex text-center'>
-                                    <div className='d-flex align-items-center pe-3'>
+                        {/* ip details */}
+                        <div className="col-5 col-xxl-4 ms-4">
+                            <div className='providerinfo'>
+                                <div className='d-flex  '>
+                                    <div className='d-flex align-items-center '>
                                         <img src={ippng} />
                                     </div>
-                                    <div className='internetinfo'>
+                                    <div className=' internetinfo '>
                                         <p className='title'>IP Address</p>
                                         <p className='value'>{ip}</p>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* empty space */}
-                            <div className="col-1 col-xxl-2"></div>
                         </div>
 
-                    </div>
-
-                    {/* Add space */}
-                    <div className="col-xxl-3 bg-light">
+                        {/* empty space */}
+                        <div className="col-1 col-xxl-2"></div>
                     </div>
                 </div>
+
+                {/* adspace container */}
+                <div className="col-lg-3 col-xl-3 col-xxl-3 ">
+
+                </div>
             </div>
-        </div >
+
+            {/* Add space */}
+
+        </div>
+
     );
 };
 
