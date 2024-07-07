@@ -65,6 +65,9 @@ img {
 .__speedmeter.show {
   opacity: 1;
 }
+.refresh_btn button {
+  border: none !important;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
