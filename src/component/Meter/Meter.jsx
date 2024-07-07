@@ -78,7 +78,7 @@ const Meter = (props) => {
                             offsetCenter: [0, '45%'],
                             fontSize: 17,
                             fontWeight: '400',
-                            formatter: '{value} °C',
+                            formatter: '{value} °mbps',
                             color: 'white' // Red color
                         },
                         data: [
@@ -162,7 +162,6 @@ const Meter = (props) => {
     return (
         <div className="gauge-container">
             <div id="chart-container" ref={chartRef} className="__meter" ></div>
-
         </div>
     );
 };
