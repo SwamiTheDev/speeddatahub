@@ -1,3 +1,8 @@
 .page {
+  margin-top: 7vh;
+  /* position: ; */
+  height: 93vh;
+}
+.about {
   height: 93vh;
 }

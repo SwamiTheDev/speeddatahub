@@ -1,4 +1,5 @@
 import SpeedTest from "../component/speedtest/speedtest";
+import About from "../pages/about/about";
 import './layout.css'
 
 export default function Layout() {
@@ -8,10 +9,10 @@ export default function Layout() {
                 <div className="page">
                     <SpeedTest />
                 </div>
-                <div className="row">
-                    <div className="col">
-                    </div>
+                <div className="about">
+                    <About />
                 </div>
+
             </div>
         </>
     )
