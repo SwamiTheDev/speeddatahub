@@ -2,6 +2,7 @@ nav {
   position: fixed;
   height: 7vh;
   background-color: #151a4c;
+  margin-bottom: 0px !important;
 }
 .offcanvas-body,
 .offcanvas-header {
