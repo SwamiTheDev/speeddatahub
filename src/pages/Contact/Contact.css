@@ -188,7 +188,7 @@ input:focus {
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .contact {
     background-color: var(--secondary-color);
-    height: 93vh !important;
+    height: 90vh !important;
     padding-top: 6%;
   }
 
@@ -223,7 +223,7 @@ input:focus {
 @media only screen and (min-width: 1201px) {
   .contact {
     background-color: var(--secondary-color);
-    height: 93vh !important;
+    height: 90vh !important;
     padding-top: 6%;
   }
 
