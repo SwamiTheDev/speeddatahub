@@ -1,0 +1,256 @@
+/*-----------------------------------*\
+  * #CONTACT
+\*-----------------------------------*/
+
+.contact {
+  background-color: var(--secondary-color);
+}
+.__container {
+  background: rgba(255, 255, 255, 0.144);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  height: 80%;
+}
+.section-subtitle {
+  font-size: 20px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.section-text {
+  color: white;
+  /* font-size: large; */
+  letter-spacing: 2px;
+}
+.section-text a {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+input {
+  background-color: #151a4c !important;
+  border: none !important;
+  color: white;
+  letter-spacing: 2px;
+  padding: 5px;
+}
+
+::placeholder {
+  color: white !important;
+  opacity: 0.7 !important;
+  letter-spacing: 2px;
+}
+span#basic-addon1,
+span.input-group-text {
+  border: 0px !important;
+  background-color: var(--secondary-color) !important;
+  color: red !important;
+}
+input.form-control {
+  color: white;
+  letter-spacing: 2px;
+}
+textarea.form-control {
+  background-color: #151a4c;
+  color: white;
+  letter-spacing: 2px !important ;
+  border: none;
+}
+input:active,
+input:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+input.form-control:focus,
+input.form-control:active,
+textarea.form-control:focus,
+textarea.form-control:active {
+  color: white !important;
+}
+textarea.form-control {
+  background-color: #151a4c;
+}
+.____btn {
+  border: none !important;
+}
+textarea:active,
+textarea:focus {
+  /* border: 2px red solid !important; */
+  background-color: #151a4c !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input:focus {
+  box-shadow: 0px !important;
+  outline: 0px !important;
+  box-shadow: 0px !important;
+  background-color: red;
+}
+
+._mail_btn {
+  height: 50px;
+  width: 240px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact {
+    padding-top: 2.5vh;
+    height: 93vh;
+  }
+
+  .__container {
+    width: 90%;
+    height: 95%;
+    border-radius: 7px;
+  }
+  .section-subtitle {
+    font-size: 14px !important;
+    margin-top: -15px;
+    font-weight: 700;
+  }
+  .section-title {
+    font-size: 12px !important;
+    letter-spacing: 1px;
+  }
+  .section-text {
+    /* font-size: 11px;
+     */
+    display: none;
+  }
+  .mail_ {
+    height: 180px;
+  }
+  .mail_lottie {
+    height: 220px;
+  }
+  .____btn {
+    padding-bottom: 25px;
+  }
+  ::placeholder {
+    font-size: 12px;
+    font-weight: 100 !important;
+  }
+  textarea.form-control {
+    font-size: 12px;
+  }
+  textarea {
+    height: 90px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .contact {
+    padding-top: 2.5vh;
+    height: 93vh;
+  }
+  .__container {
+    width: 90%;
+    height: 95%;
+    border-radius: 7px;
+  }
+  .section-subtitle {
+    font-size: 14px !important;
+    margin-top: -15px;
+    font-weight: 700;
+  }
+  .section-title {
+    font-size: 12px !important;
+    letter-spacing: 1px;
+  }
+  .section-text {
+    /* font-size: 11px;
+     */
+    display: none;
+  }
+  .mail_ {
+    height: 200px;
+    width: 100%;
+    /* border: 2px red solid; */
+  }
+  .mail_lottie {
+    height: 200px;
+  }
+  .____btn {
+    padding-bottom: 25px;
+  }
+  ::placeholder {
+    font-size: 12px;
+    font-weight: 100 !important;
+  }
+  textarea.form-control {
+    font-size: 12px;
+  }
+  textarea {
+    height: 90px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .contact {
+    background-color: var(--secondary-color);
+    height: 93vh !important;
+    padding-top: 6%;
+  }
+
+  .mail_lottie {
+    height: 400px;
+    width: 400px;
+    max-height: 400px;
+    /* margin-bottom: 100px !important; */
+  }
+
+  .sendbtn {
+    height: 300px !important;
+  }
+  .____btn {
+    margin-top: 20px;
+    /* border: 2px red solid; */
+    height: 50px;
+  }
+  input.form-control {
+    height: 40px;
+    width: 70% !important;
+  }
+  .input-group {
+    margin: auto;
+    width: 80% !important;
+  }
+  textarea.form-control {
+    height: 90px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .contact {
+    background-color: var(--secondary-color);
+    height: 93vh !important;
+    padding-top: 6%;
+  }
+
+  .mail_lottie {
+    height: 400px;
+    width: 700px;
+    max-height: 400px;
+    /* margin-bottom: 100px !important; */
+  }
+
+  .sendbtn {
+    height: 300px !important;
+  }
+  .____btn {
+    margin-top: 20px;
+    /* border: 2px red solid; */
+    height: 50px;
+  }
+  input.form-control {
+    height: 40px;
+    width: 70% !important;
+  }
+  .input-group {
+    margin: auto;
+    width: 80% !important;
+  }
+  textarea.form-control {
+    height: 90px;
+  }
+}
