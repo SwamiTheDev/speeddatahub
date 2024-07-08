@@ -131,7 +131,7 @@ const SpeedTest = () => {
                                     <div className='internetinfo'>
                                         <div className='d-flex'>
                                             <div className='d-flex align-items-center pe-3'>
-                                                <img src={connectionPng} />
+                                                <img src={connectionPng} className='__img' alt='ipaddress_png' />
                                             </div>
                                             <div className=' '>
                                                 <p className='title'>IP Address</p>
@@ -146,7 +146,7 @@ const SpeedTest = () => {
                                     <div className='internetinfo'>
                                         <div className='d-flex'>
                                             <div className='d-flex align-items-center pe-3'>
-                                                <img src={organization} />
+                                                <img src={organization} className='__img' alt='organization_png' />
                                             </div>
                                             <div className=' '>
                                                 <p className='title'>Organization</p>
@@ -161,7 +161,7 @@ const SpeedTest = () => {
                                     <div className='internetinfo'>
                                         <div className='d-flex'>
                                             <div className='d-flex align-items-center pe-3'>
-                                                <img src={socket} />
+                                                <img src={socket} className='__img' alt='connection_png' />
                                             </div>
                                             <div className=' '>
                                                 <p className='title'>Connection Type</p>
@@ -176,7 +176,7 @@ const SpeedTest = () => {
                                     <div className='internetinfo'>
                                         <div className='d-flex'>
                                             <div className='d-flex align-items-center pe-3'>
-                                                <img src={devices} />
+                                                <img src={devices} className='__img' alt='device_png' />
                                             </div>
                                             <div className=' '>
                                                 <p className='title'>Device</p>
@@ -208,16 +208,16 @@ const SpeedTest = () => {
                             <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
 
                                 {/* empty space */}
-                                <div className="col-1 col-xxl-2"></div>
+                                <div className="col-0 col-xxl-2"></div>
 
                                 {/* provider details */}
-                                <div className="col-5 col-xxl-4 me-xxl-5">
-                                    <div className='providerinfo'>
+                                <div className="col-5 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                                    <div className='internetinfo'>
                                         <div className='d-flex'>
-                                            <div className='d-flex align-items-center '>
-                                                <img src={provider} />
+                                            <div className='d-flex align-items-center pe-3'>
+                                                <img src={provider} className='__img' alt='device_png' />
                                             </div>
-                                            <div className='internetinfo'>
+                                            <div className=' '>
                                                 <p className='title'>Provider</p>
                                                 <p className='value'>{domain}</p>
                                             </div>
@@ -226,23 +226,22 @@ const SpeedTest = () => {
                                 </div>
 
                                 {/* ip details */}
-                                <div className="col-5 col-xxl-4 ms-4">
-                                    <div className='providerinfo'>
-                                        <div className='d-flex  '>
-                                            <div className='d-flex align-items-center '>
-                                                <img src={ippng} />
+
+                                <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                                    <div className='internetinfo'>
+                                        <div className='d-flex'>
+                                            <div className='d-flex align-items-center pe-3'>
+                                                <img src={ippng} className='__img' alt='device_png' />
                                             </div>
-                                            <div className=' internetinfo '>
+                                            <div className=' '>
                                                 <p className='title'>IP Address</p>
                                                 <p className='value'>{ip}</p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
 
                                 {/* empty space */}
-                                <div className="col-1 col-xxl-2"></div>
                             </div>
                         </div>
 
@@ -257,7 +256,6 @@ const SpeedTest = () => {
                 </div>
 
             </div>
-            <Footers />
         </>
     );
 };

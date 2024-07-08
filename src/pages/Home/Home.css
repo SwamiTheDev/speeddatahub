@@ -130,6 +130,10 @@ img {
     padding: 5px 0px;
     letter-spacing: 0.8px;
   }
+  img.__img {
+    width: 20px !important;
+    height: 30px !important;
+  }
   .internetinfo .title {
     font-size: 11px;
     letter-spacing: 0.8px;
@@ -156,6 +160,10 @@ img {
     height: 350px !important;
     width: 350px !important;
   }
+  img.__img {
+    width: 25px !important;
+    height: 33px !important;
+  }
   .effect1_alt {
     margin-top: 80px;
   }
@@ -175,6 +183,10 @@ img {
   .internetinfo .title {
     font-size: 11px;
     letter-spacing: 0.8px;
+  }
+  img.__img {
+    width: 25px !important;
+    height: 35px !important;
   }
   .button-container {
     margin-top: 5px !important;
@@ -198,6 +210,10 @@ img {
   }
   .internetinfo .title {
     padding-bottom: 10px;
+  }
+  img.__img {
+    width: 30px !important;
+    height: 30px !important;
   }
 
   .pagetitle {
