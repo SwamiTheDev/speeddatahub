@@ -58,16 +58,17 @@ const NavBar = () => {
                                     About
                                 </Link>
                             </li>
-                            <li className="nav-item ms-2 me-2">
-                                <Link to="/projects" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
-                                    Projects
-                                </Link>
-                            </li>
+
                             <li className="nav-item ms-2 me-2">
                                 <Link to="/contact" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
                                     Contact
                                 </Link>
                             </li>
+                            {/* <li className="nav-item ms-2 me-2">
+                                <Link to="/footer" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
+                                    footer
+                                </Link>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
@@ -92,16 +93,17 @@ const NavBar = () => {
                                 About
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link to="/projects" className="nav-link mb-3" onClick={closeOffcanvas}>
-                                Projects
-                            </Link>
-                        </li>
+
                         <li className="nav-item">
                             <Link to="/contact" className="nav-link mb-3" onClick={closeOffcanvas}>
                                 Contact
                             </Link>
                         </li>
+                        {/* <li className="nav-item">
+                            <Link to="/footer" className="nav-link mb-3" onClick={closeOffcanvas}>
+                                footer
+                            </Link>
+                        </li> */}
                     </ul>
                 </div>
             </div>
