@@ -10,7 +10,7 @@
 }
 
 .App {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   height: 100vh;
   text-align: center;
 }
