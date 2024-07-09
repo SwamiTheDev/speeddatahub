@@ -217,10 +217,13 @@ img {
     height: 30px !important;
   }
 
-  .pagetitle {
+  .__page {
+    padding-top: 40px !important;
+  }
+  /* .pagetitle {
     color: var(--light-color);
     padding-top: 40px !important;
     margin-bottom: 30px !important;
     font-size: 20px;
-  }
+  } */
 }

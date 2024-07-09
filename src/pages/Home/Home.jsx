@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Meter from '../../component/Meter/Meter.jsx';
 import './Home.css';
 import Box from '../../component/box/box.jsx';
-import Footers from '../Footer/Footer.jsx';
 import About from '../About/About.jsx'
 import Checkbutton from '../../component/checkbutton/checkbutton.jsx';
 import axios from 'axios';
@@ -91,10 +90,10 @@ const SpeedTest = () => {
             <div className="center __page">
                 <div className="container">
 
-                    <h1 className="pagetitle ">Internet Speed Test</h1>
+                    {/* <h1 className="pagetitle ">Internet Speed Test</h1> */}
 
                     {/* Results */}
-                    <div className="row mx-auto ">
+                    <div className="row mx-auto hometitle">
 
                         {/* empty for UI */}
                         <div className="col-lg-3 col-xl-3 col-xxl-3">
