@@ -99,7 +99,7 @@ input:focus {
 @media only screen and (max-width: 600px) {
   .contact {
     padding-top: 2.5vh;
-    height: 93vh;
+    height: 100vh;
   }
 
   .__container {
@@ -225,7 +225,7 @@ input:focus {
 @media only screen and (min-width: 1201px) {
   .contact {
     background-color: var(--secondary-color);
-    height: 96vh !important;
+    height: 93vh !important;
     padding-top: 6%;
   }
 
