@@ -14,6 +14,7 @@ export default function Footers() {
                                 <span className='_title_'>Get connected with us on social networks:</span>
                             </div>
 
+                            {/* social icons */}
                             <div>
                                 <a href="" class="_icons_ me-2">
                                     <i class="fab fa-facebook-f"></i>
@@ -69,9 +70,8 @@ export default function Footers() {
                                     </p>
                                 </div>
 
+                                {/* <!--page Links --> */}
                                 <div class="col-md-3 col-lg-2 col-xl-2 ms-3 mb-1">
-
-                                    {/* <!-- Links --> */}
                                     <h6 class="list_title __link">Useful links</h6>
                                     <hr class="mb-2 mt-0 " style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
 
@@ -111,7 +111,6 @@ export default function Footers() {
                                     <p className='__link mb-2'><i class="fas fa-home mr-5     me-2"></i> Mayiladuthurai, Tamil Nadu.</p>
                                     <p className='__link mb-2'><i class="fas fa-envelope mr-3 me-2"></i> swamithedev@gmail.com</p>
                                     <p className='__link mb-2'><i class="fas fa-phone mr-3 me-2" ></i> + 91 6383548296</p>
-                                    <p className='__link mb-2'><i class="fas fa-print mr-3 me-2" ></i> + 01 234 567 89</p>
                                 </div>
                             </div>
                         </div>
