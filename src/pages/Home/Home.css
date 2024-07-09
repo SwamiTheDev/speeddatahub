@@ -2,14 +2,15 @@
 
 .__page {
   background-color: var(--secondary-color);
-  height: 93vh !important;
+  height: 100vh !important;
   padding-top: 10vh !important;
 }
 .pagetitle {
   color: var(--light-color);
-  padding-top: 20px !important;
+  padding-top: 5vh !important;
   font-size: 20px;
 }
+
 .internetinfo .value {
   color: var(--light-color);
   font-weight: var(--text-bold);
@@ -124,7 +125,7 @@ img {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
   .internetinfo {
     margin-left: 20px;
     margin-bottom: 20px;
@@ -211,6 +212,9 @@ img {
 @media only screen and (min-width: 1200px) {
   .internetinfo {
     padding: 20px 20px;
+  }
+  .hometitle {
+    padding-top: 10vh;
   }
   .internetinfo .title {
     padding-bottom: 10px;

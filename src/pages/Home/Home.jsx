@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Meter from '../../component/Meter/Meter.jsx';
 import './Home.css';
 import Box from '../../component/box/box.jsx';
+import Footers from '../Footer/Footer.jsx';
 import About from '../About/About.jsx'
 import Checkbutton from '../../component/checkbutton/checkbutton.jsx';
 import axios from 'axios';
@@ -199,61 +200,62 @@ const SpeedTest = () => {
                                 {showMeter && <Meter value={downloadSpeed} />}
                             </div>
 
-                            {/* display the refresh button */}
-                            <div className='refresh_btn'>
-                                {showMeter ? <button onClick={Refresh} ><img src={refresh} /></button> : <button></button>}
-                            </div>
-
-                            {/* display the ip and provider */}
-                            <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
-
-                                {/* empty space */}
-                                <div className="col-0 col-xxl-2"></div>
-
-                                {/* provider details */}
-                                <div className="col-5 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
-                                    <div className='internetinfo'>
-                                        <div className='d-flex'>
-                                            <div className='d-flex align-items-center pe-3'>
-                                                <img src={provider} className='__img' alt='device_png' />
-                                            </div>
-                                            <div className=' '>
-                                                <p className='title'>Provider</p>
-                                                <p className='value'>{domain}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* ip details */}
-
-                                <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
-                                    <div className='internetinfo'>
-                                        <div className='d-flex'>
-                                            <div className='d-flex align-items-center pe-3'>
-                                                <img src={ippng} className='__img' alt='device_png' />
-                                            </div>
-                                            <div className=' '>
-                                                <p className='title'>IP Address</p>
-                                                <p className='value'>{ip}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* empty space */}
-                            </div>
                         </div>
 
-                        {/* adspace container */}
-                        <div className="col-lg-3 col-xl-3 col-xxl-3 ">
+                        {/* display the refresh button */}
+                        <div className='refresh_btn'>
+                            {showMeter ? <button onClick={Refresh} ><img src={refresh} /></button> : <button></button>}
+                        </div>
 
+                        {/* display the ip and provider */}
+                        <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
+
+                            {/* empty space */}
+                            <div className="col-0 col-xxl-2"></div>
+
+                            {/* provider details */}
+                            <div className="col-5 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                                <div className='internetinfo'>
+                                    <div className='d-flex'>
+                                        <div className='d-flex align-items-center pe-3'>
+                                            <img src={provider} className='__img' alt='device_png' />
+                                        </div>
+                                        <div className=' '>
+                                            <p className='title'>Provider</p>
+                                            <p className='value'>{domain}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* ip details */}
+
+                            <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                                <div className='internetinfo'>
+                                    <div className='d-flex'>
+                                        <div className='d-flex align-items-center pe-3'>
+                                            <img src={ippng} className='__img' alt='device_png' />
+                                        </div>
+                                        <div className=' '>
+                                            <p className='title'>IP Address</p>
+                                            <p className='value'>{ip}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* empty space */}
                         </div>
                     </div>
 
-                    {/* Add space */}
+                    {/* adspace container */}
+                    <div className="col-lg-3 col-xl-3 col-xxl-3 ">
 
+                    </div>
                 </div>
+
+                {/* Add space */}
+
 
             </div>
             {/* about contact  */}
