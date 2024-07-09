@@ -122,6 +122,10 @@ img {
   .__speedmeter {
     height: 250px;
   }
+  .ip_address,
+  .org_info {
+    display: none !important;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -142,6 +146,10 @@ img {
   .internetinfo .title {
     font-size: 11px;
     letter-spacing: 0.8px;
+  }
+  .ip_address,
+  .org_info {
+    display: none !important;
   }
 }
 

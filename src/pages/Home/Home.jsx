@@ -128,7 +128,7 @@ const SpeedTest = () => {
                             <div className="row ">
 
                                 {/* Ip address */}
-                                <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10">
+                                <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10 ip_address">
                                     <div className='internetinfo'>
                                         <div className='d-flex'>
                                             <div className='d-flex align-items-center pe-3'>
@@ -143,7 +143,7 @@ const SpeedTest = () => {
                                 </div>
 
                                 {/* organization info*/}
-                                <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10 ">
+                                <div className="col-6 col-sm-6 col-lg-10 col-xl-10 col-xxl-10 org_info">
                                     <div className='internetinfo'>
                                         <div className='d-flex'>
                                             <div className='d-flex align-items-center pe-3'>
@@ -200,62 +200,62 @@ const SpeedTest = () => {
                                 {showMeter && <Meter value={downloadSpeed} />}
                             </div>
 
-                        </div>
 
-                        {/* display the refresh button */}
-                        <div className='refresh_btn'>
-                            {showMeter ? <button onClick={Refresh} ><img src={refresh} /></button> : <button></button>}
-                        </div>
+                            {/* display the refresh button */}
+                            <div className='refresh_btn'>
+                                {showMeter ? <button onClick={Refresh} ><img src={refresh} /></button> : <button></button>}
+                            </div>
 
-                        {/* display the ip and provider */}
-                        <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
+                            {/* display the ip and provider */}
+                            <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
 
-                            {/* empty space */}
-                            <div className="col-0 col-xxl-2"></div>
+                                {/* empty space */}
+                                <div className="col-0 col-xxl-2"></div>
 
-                            {/* provider details */}
-                            <div className="col-5 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
-                                <div className='internetinfo'>
-                                    <div className='d-flex'>
-                                        <div className='d-flex align-items-center pe-3'>
-                                            <img src={provider} className='__img' alt='device_png' />
-                                        </div>
-                                        <div className=' '>
-                                            <p className='title'>Provider</p>
-                                            <p className='value'>{domain}</p>
+                                {/* provider details */}
+                                <div className="col-5 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                                    <div className='internetinfo'>
+                                        <div className='d-flex'>
+                                            <div className='d-flex align-items-center pe-3'>
+                                                <img src={provider} className='__img' alt='device_png' />
+                                            </div>
+                                            <div className=' '>
+                                                <p className='title'>Provider</p>
+                                                <p className='value'>{domain}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* ip details */}
+                                {/* ip details */}
 
-                            <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
-                                <div className='internetinfo'>
-                                    <div className='d-flex'>
-                                        <div className='d-flex align-items-center pe-3'>
-                                            <img src={ippng} className='__img' alt='device_png' />
-                                        </div>
-                                        <div className=' '>
-                                            <p className='title'>IP Address</p>
-                                            <p className='value'>{ip}</p>
+                                <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                                    <div className='internetinfo'>
+                                        <div className='d-flex'>
+                                            <div className='d-flex align-items-center pe-3'>
+                                                <img src={ippng} className='__img' alt='device_png' />
+                                            </div>
+                                            <div className=' '>
+                                                <p className='title'>IP Address</p>
+                                                <p className='value'>{ip}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* empty space */}
+                                {/* empty space */}
+                            </div>
+                        </div>
+
+                        {/* adspace container */}
+                        <div className="col-lg-3 col-xl-3 col-xxl-3 ">
+
                         </div>
                     </div>
 
-                    {/* adspace container */}
-                    <div className="col-lg-3 col-xl-3 col-xxl-3 ">
+                    {/* Add space */}
 
-                    </div>
                 </div>
-
-                {/* Add space */}
-
 
             </div>
             {/* about contact  */}
