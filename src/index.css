@@ -7,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #9293ae;
   height: 100%;
+  overflow: -moz-scrollbars-horizontal;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 code {

@@ -4,6 +4,7 @@
   background-color: var(--secondary-color);
   height: 100vh !important;
   padding-top: 10vh !important;
+  overflow-x: hidden;
 }
 .pagetitle {
   color: var(--light-color);
@@ -130,7 +131,7 @@ img {
     display: none !important;
   }
   .ip_value {
-    width: 100px;
+    width: 80px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
