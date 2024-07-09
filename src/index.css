@@ -8,8 +8,8 @@ body {
   background-color: #9293ae;
   height: 100%;
   overflow: -moz-scrollbars-horizontal;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 code {
