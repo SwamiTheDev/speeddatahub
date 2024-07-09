@@ -3,7 +3,7 @@
 .__page {
   background-color: var(--secondary-color);
   height: 93vh !important;
-  margin-top: 0px !important;
+  margin-top: 7vh !important;
 }
 .pagetitle {
   color: var(--light-color);
@@ -24,6 +24,7 @@
 .box {
   background-color: #151a4c;
   padding: 20px;
+  /* font-weight: 700; */
   margin: 10px 0px 10px 0px;
 }
 .box:nth-child(4) {
