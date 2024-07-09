@@ -2,7 +2,7 @@ import React from 'react';
 import './Contact.css';
 import Footers from '../Footer/Footer.jsx';
 import Lottie from 'lottie-react';
-import mail from '../../assets/lotties/Animation - 1720336038847.json'
+import mail from '../../assets/lotties/Sending Mail.json'
 import sendbtn from '../../assets/lotties/sendbtn.json'
 
 const Contact = () => {
@@ -27,7 +27,6 @@ const Contact = () => {
                                 <Lottie animationData={mail} loop={true} className='mail_lottie' />
                             </div>
                         </div>
-
                         <div className="col col-sm-12 col-md-6">
                             <form action="" className="contact-form" id="form" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
 
@@ -66,14 +65,13 @@ const Contact = () => {
 
                                 <div className='sendbtn'>
                                     <button className='____btn mt-4 mb-5 mt-xl-4 mb-xl-4'>
+                                        {/* <Lottie animationData={sendbtn} loop={true} className='_mail_btn' /> */}
                                         <Lottie animationData={sendbtn} loop={true} className='_mail_btn' />
                                     </button>
                                 </div>
                             </form>
                         </div>
-
                     </div>
-
                 </div>
             </div>
             {/* footer component */}

@@ -4,6 +4,8 @@
 
 .contact {
   background-color: var(--secondary-color);
+  /* height: 100vh !important; */
+  padding-top: 15vh !important;
 }
 .__container {
   background: rgba(255, 255, 255, 0.144);
@@ -223,7 +225,7 @@ input:focus {
 @media only screen and (min-width: 1201px) {
   .contact {
     background-color: var(--secondary-color);
-    height: 90vh !important;
+    height: 96vh !important;
     padding-top: 6%;
   }
 
