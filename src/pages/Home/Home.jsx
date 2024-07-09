@@ -3,6 +3,7 @@ import Meter from '../../component/Meter/Meter.jsx';
 import './Home.css';
 import Box from '../../component/box/box.jsx';
 import Footers from '../Footer/Footer.jsx';
+import About from '../About/About.jsx'
 import Checkbutton from '../../component/checkbutton/checkbutton.jsx';
 import axios from 'axios';
 
@@ -255,6 +256,11 @@ const SpeedTest = () => {
 
                 </div>
 
+            </div>
+            {/* about contact  */}
+            <div  >
+
+                <About />
             </div>
         </>
     );
