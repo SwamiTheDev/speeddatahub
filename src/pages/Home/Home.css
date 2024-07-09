@@ -263,4 +263,11 @@ img {
     word-wrap: break-word;
     hyphens: auto;
   }
+  .refresh_btn {
+    margin-top: -15vh;
+    /* border: 3px green solid; */
+  }
+  .row.mt-0.mt-lg-4.mt-xl-5.mt-xxl-5.__address {
+    margin-top: -10vh !important;
+  }
 }

@@ -207,13 +207,13 @@ const SpeedTest = () => {
                         </div>
 
                         {/* display the ip and provider */}
-                        <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5">
+                        <div className="row mt-0 mt-lg-4 mt-xl-5 mt-xxl-5 __address">
 
                             {/* empty space */}
-                            <div className="col-0 col-xxl-2"></div>
+                            <div className="col-0 col-lg-2 col-xxl-4"></div>
 
                             {/* provider details */}
-                            <div className="col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                            <div className="col-6 col-sm-6 col-lg-5 col-xl-4 col-xxl-3">
                                 <div className='internetinfo'>
                                     <div className='d-flex'>
                                         <div className='d-flex align-items-center pe-3'>
@@ -228,7 +228,7 @@ const SpeedTest = () => {
                             </div>
 
                             {/* ip details */}
-                            <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                            <div className=" col-6 col-sm-6 col-lg-5 col-xl-4 col-xxl-3">
                                 <div className='internetinfo'>
                                     <div className='d-flex'>
                                         <div className='d-flex align-items-center  pe-3'>
@@ -244,6 +244,8 @@ const SpeedTest = () => {
                             </div>
 
                             {/* empty space */}
+                            <div className="col-0 col-lg-1 col-xxl-3"></div>
+
                         </div>
 
                         {/* adspace container */}
