@@ -9,9 +9,10 @@ section._footer_title.d-flex.justify-content-between.p-4.text-white {
 }
 
 ._title_ {
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 16px;
+  color: white !important;
 }
 ._icons_ {
   color: var(--secondary-color);
@@ -35,10 +36,12 @@ section._footer_title.d-flex.justify-content-between.p-4.text-white {
 }
 .list_ans {
   color: var(--light-color);
-  opacity: 0.8;
+  opacity: 0.5;
   letter-spacing: 1px;
   padding: 5px;
   text-align: justify;
+}
+.list_ans {
 }
 
 a._link {
@@ -48,7 +51,13 @@ p.__link.mb-2 {
   color: var(--light-color) !important;
   opacity: 0.6;
 }
+.__dev_info {
+  color: white !important;
+}
 
+.__dev_info .___links {
+  color: var(--primary-color);
+}
 @media screen and (max-width: 600px) {
   section._footer_title.d-flex.justify-content-between.p-4.text-white {
     visibility: hidden;
