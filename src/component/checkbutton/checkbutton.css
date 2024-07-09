@@ -245,6 +245,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #wrapper {
+    height: 250px !important;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .button-container {
     margin-top: 20px !important;

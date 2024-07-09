@@ -3,7 +3,7 @@
 .__page {
   background-color: var(--secondary-color);
   height: 93vh !important;
-  margin-top: 7vh !important;
+  padding-top: 10vh !important;
 }
 .pagetitle {
   color: var(--light-color);
@@ -117,6 +117,9 @@ img {
   .refresh_btn {
     margin-top: -10px !important;
     margin-bottom: 15px;
+  }
+  .__speedmeter {
+    height: 250px;
   }
 }
 
