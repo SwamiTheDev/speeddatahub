@@ -20,7 +20,9 @@ const NavBar = () => {
 
     return (
         <div className="Navbar">
-            <nav className="navbar navbar-expand-md">
+
+            {/* large sreen navbar */}
+            <nav className="navbar navbar-expand-md fixed-top">
                 <div className="container">
                     <Link to="/" className="navbar-brand d-inline">
                         <p className='d-inline x' style={{ paddingTop: '0px', paddingBottom: '0px', marginRight: '0px' }}>speedtest</p>
@@ -47,33 +49,37 @@ const NavBar = () => {
                         />
                     </button>
                     <div className="collapse navbar-collapse" id="navbar-offcanvas">
+
+                        {/* large navlink llinks */}
                         <ul className="navbar-nav ms-auto">
+
+                            {/* home page link */}
                             <li className="nav-item ms-2 me-2">
                                 <Link to="/" className="nav-link ms-2 me-2 text-center" onClick={closeOffcanvas}>
                                     Home
                                 </Link>
                             </li>
+
+                            {/* about page link */}
                             <li className="nav-item ms-2 me-2">
                                 <Link to="/about" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
                                     About
                                 </Link>
                             </li>
 
+                            {/* contact page link */}
                             <li className="nav-item ms-2 me-2">
                                 <Link to="/contact" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
                                     Contact
                                 </Link>
                             </li>
-                            {/* <li className="nav-item ms-2 me-2">
-                                <Link to="/footer" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
-                                    footer
-                                </Link>
-                            </li> */}
+
                         </ul>
                     </div>
                 </div>
             </nav>
 
+            {/* mobile screen nav links */}
             <div className={`offcanvas offcanvas-start ${showOffcanvas ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title ms-2  mt-3 mb-3" id="offcanvasNavbarLabel" style={{ letterSpacing: '15PX', fontWeight: '800', fontSize: '20px', color: '#ff4848' }}>STH</h5>
@@ -83,27 +89,28 @@ const NavBar = () => {
                 </div>
                 <div className="offcanvas-body">
                     <ul className="navbar-nav">
+
+                        {/* home page like */}
                         <li className="nav-item">
                             <Link to="/" className="nav-link mb-3" onClick={closeOffcanvas}>
                                 Home
                             </Link>
                         </li>
+
+                        {/* about page link */}
                         <li className="nav-item">
                             <Link to="/about" className="nav-link mb-3" onClick={closeOffcanvas}>
                                 About
                             </Link>
                         </li>
 
+                        {/* contact page link */}
                         <li className="nav-item">
                             <Link to="/contact" className="nav-link mb-3" onClick={closeOffcanvas}>
                                 Contact
                             </Link>
                         </li>
-                        {/* <li className="nav-item">
-                            <Link to="/footer" className="nav-link mb-3" onClick={closeOffcanvas}>
-                                footer
-                            </Link>
-                        </li> */}
+
                     </ul>
                 </div>
             </div>

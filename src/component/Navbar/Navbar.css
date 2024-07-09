@@ -16,15 +16,29 @@ nav {
   opacity: 0.8;
   letter-spacing: 1px;
   font-size: 16px;
-  line-height: 18px;
+  /* line-height: 18px; */
+  border-radius: 3px;
+  padding: 5px 15px !important;
 }
-.nav-item:hover {
-  transition: 2s;
+.nav-link:active {
+  color: white;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  font-size: 16px;
+  /* line-height: 18px; */
+  border-radius: 3px;
+  padding: 5px 15px !important;
+}
+
+.nav-link:hover {
+  transition: 1s;
+  color: white;
   background-color: var(--primary-color);
 }
-.nav-link:hover {
+/*
+.nav-item:hover {
   color: white;
-}
+} */
 p.d-inline.navbar-brand {
   color: white;
   text-transform: uppercase;
