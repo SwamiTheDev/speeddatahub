@@ -81,6 +81,9 @@ img {
   .box:nth-child(2) {
     z-index: 9;
   }
+  .container {
+    width: 100vw !important;
+  }
   .box:nth-child(3) {
     margin-left: -10px;
     padding-right: 10px !important;
@@ -116,8 +119,8 @@ img {
     margin-top: -20px;
   }
   .refresh_btn {
-    margin-top: -10px !important;
-    margin-bottom: 15px;
+    margin-top: 10px !important;
+    margin-bottom: 25px !important;
   }
   .__speedmeter {
     height: 250px;
@@ -125,6 +128,12 @@ img {
   .ip_address,
   .org_info {
     display: none !important;
+  }
+  .ip_value {
+    width: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 
@@ -180,6 +189,10 @@ img {
   .effect1_alt {
     margin-top: 80px;
   }
+  .ip_address,
+  .org_info {
+    display: block !important;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -214,6 +227,10 @@ img {
     margin-bottom: 30px !important;
     font-size: 20px;
   }
+  .ip_address,
+  .org_info {
+    display: block !important;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -235,10 +252,14 @@ img {
   .__page {
     padding-top: 40px !important;
   }
-  /* .pagetitle {
-    color: var(--light-color);
-    padding-top: 40px !important;
-    margin-bottom: 30px !important;
-    font-size: 20px;
-  } */
+  .ip_address,
+  .org_info {
+    display: block !important;
+  }
+  p.value {
+    width: 150px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
 }

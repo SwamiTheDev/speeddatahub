@@ -97,7 +97,7 @@ const SpeedTest = () => {
                     <div className="row mx-auto hometitle">
 
                         {/* empty for UI */}
-                        <div className="col-lg-3 col-xl-3 col-xxl-3">
+                        <div className=" col-sm-0 col-lg-3 col-xl-3 col-xxl-3">
                         </div>
 
                         {/* upload Speed */}
@@ -116,7 +116,7 @@ const SpeedTest = () => {
                         </div>
 
                         {/* empty for UI */}
-                        <div className="col-lg-3 col-xl-3 col-xxl-3 ">
+                        <div className="col-sm-0 col-lg-3 col-xl-3 col-xxl-3 ">
                         </div>
                     </div>
 
@@ -135,7 +135,7 @@ const SpeedTest = () => {
                                                 <img src={connectionPng} className='__img' alt='ipaddress_png' />
                                             </div>
                                             <div className=' '>
-                                                <p className='title'>IP Address</p>
+                                                <p className='title top_ip'>IP Address</p>
                                                 <p className='value'>{ip}</p>
                                             </div>
                                         </div>
@@ -199,7 +199,6 @@ const SpeedTest = () => {
                                 )}
                                 {showMeter && <Meter value={downloadSpeed} />}
                             </div>
-
                         </div>
 
                         {/* display the refresh button */}
@@ -214,7 +213,7 @@ const SpeedTest = () => {
                             <div className="col-0 col-xxl-2"></div>
 
                             {/* provider details */}
-                            <div className="col-5 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
+                            <div className="col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
                                 <div className='internetinfo'>
                                     <div className='d-flex'>
                                         <div className='d-flex align-items-center pe-3'>
@@ -229,16 +228,16 @@ const SpeedTest = () => {
                             </div>
 
                             {/* ip details */}
-
                             <div className=" col-6 col-sm-6 col-lg-10 col-xl-4 col-xxl-4">
                                 <div className='internetinfo'>
                                     <div className='d-flex'>
-                                        <div className='d-flex align-items-center pe-3'>
+                                        <div className='d-flex align-items-center  pe-3'>
                                             <img src={ippng} className='__img' alt='device_png' />
                                         </div>
+
                                         <div className=' '>
-                                            <p className='title'>IP Address</p>
-                                            <p className='value'>{ip}</p>
+                                            <p className='title '>IP Address</p>
+                                            <p className='value ip_value '>{ip}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -254,15 +253,11 @@ const SpeedTest = () => {
                     </div>
 
                     {/* Add space */}
-
                 </div>
-
             </div >
+
             {/* about contact  */}
-
-
             <About />
-
         </>
     );
 };

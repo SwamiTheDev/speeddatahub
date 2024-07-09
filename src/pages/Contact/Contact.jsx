@@ -32,7 +32,6 @@ const Contact = () => {
 
                                 {/* name field  */}
                                 <div class="input-group mt-3 mb-3">
-
                                     <span class="input-group-text" id="basic-addon1">
                                         <ion-icon name="person-circle" className='icons'></ion-icon>
                                     </span>
