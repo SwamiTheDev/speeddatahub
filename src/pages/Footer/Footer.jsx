@@ -50,23 +50,34 @@ export default function Footers() {
                                     </p>
                                 </div>
 
-                                {/* <!-- page Links --> */}
+                                {/* <!-- website  Links --> */}
                                 <div class="col-md-2 col-lg-2 col-xl-2 mb-3 ms-3">
                                     <h6 class="list_title __link">Products</h6>
                                     <hr class="mb-2 mt-0  " style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
+
+                                    {/* learn dev project link */}
                                     <p class="__link mb-2">
-                                        <Link to="/About" className="_link">
-                                            About
-                                        </Link>
+                                        <a href="https://learndevprojects.vercel.app/" target='_blank' class="_link"> Learn Dev Projects</a>
                                     </p>
+
+                                    {/* text to speech project link */}
                                     <p class="__link mb-2">
-                                        <a href="#!" class="_link">MDWordPress</a>
+                                        <a href="https://text-tospeech.vercel.app/" target='_blank' class="_link"> Text To Speech</a>
                                     </p>
+
+                                    {/* forecast fusion project link */}
                                     <p class="__link mb-2">
-                                        <a href="#!" class="_link">BrandFlow</a>
+                                        <a href="https://forecastfusion-swamithedev.vercel.app/ " target='_blank' class="_link">ForeCast Fsuion</a>
                                     </p>
+
+                                    {/* bmi calculator project link*/}
                                     <p class="__link mb-2">
-                                        <a href="#!" class="_link">Bootstrap Angular</a>
+                                        <a href="https://bmicalculator-swamithedev.vercel.app/" target='_blank' class="_link">Bmi Calculator</a>
+                                    </p>
+
+                                    {/* password strength project link */}
+                                    <p class="__link mb-2">
+                                        <a href="https://password-strength.vercel.app/" target='_blank' class="_link">Password Strength</a>
                                     </p>
                                 </div>
 

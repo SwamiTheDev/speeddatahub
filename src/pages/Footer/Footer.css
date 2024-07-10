@@ -58,6 +58,13 @@ p.__link.mb-2 {
 .__dev_info .___links {
   color: var(--primary-color);
 }
+a._link:hover {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.__lists {
+  letter-spacing: 1px;
+}
 @media screen and (max-width: 600px) {
   section._footer_title.d-flex.justify-content-between.p-4.text-white {
     visibility: hidden;
