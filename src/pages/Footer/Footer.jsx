@@ -130,7 +130,7 @@ export default function Footers() {
                     {/* <!-- Copyright --> */}
                     <div class="text-center p-3 __dev_info" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', letterSpacing: '2px' }} >
                         © All Rights Reserved . Desgined And Developed by
-                        <a class="___links ms-1" href="https://swamithedev.vercel.app/" > SWAMITHEDEV </a >
+                        <a class="___links ms-1" target='_blank' href="https://swamithedev.vercel.app" > SWAMITHEDEV </a >
                     </div>
                 </footer >
             </div >
