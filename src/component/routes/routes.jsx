@@ -6,6 +6,7 @@ import About from "../../pages/About/About";
 import SpeedTest from "../../pages/Home/Home";
 import Contact from "../../pages/Contact/Contact";
 import Footers from "../../pages/Footer/Footer";
+import FullInfo from "../../pages/Fullinfo/Fullinfo";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/user-internet-info",
+                element: <FullInfo />,
             },
             {
                 path: "/footer",

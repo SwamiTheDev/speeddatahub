@@ -67,6 +67,13 @@ const NavBar = () => {
                                 </Link>
                             </li>
 
+                            {/* full info link */}
+                            {/* <li className="nav-item ms-2 me-2">
+                                <Link to="/user-internet-info" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
+                                    Full Information
+                                </Link>
+                            </li> */}
+
                             {/* contact page link */}
                             <li className="nav-item ms-2 me-2">
                                 <Link to="/contact" className="nav-link ms-2 me-2" onClick={closeOffcanvas}>
